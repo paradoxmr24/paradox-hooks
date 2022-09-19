@@ -1,4 +1,5 @@
-import { Alert, Snackbar } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
 import React, { useReducer } from "react";
 
 const snackReducer = function (state, action) {

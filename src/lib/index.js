@@ -1,3 +1,3 @@
-import useSnack from "./hooks/useSnack";
+import useSnack from "./useSnack/";
 
 export { useSnack };

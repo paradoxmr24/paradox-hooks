@@ -10,6 +10,6 @@ Object.defineProperty(exports, "useSnack", {
   }
 });
 
-var _useSnack = _interopRequireDefault(require("./hooks/useSnack"));
+var _useSnack = _interopRequireDefault(require("./useSnack/"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
