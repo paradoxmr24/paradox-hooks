@@ -21,8 +21,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const snackReducer = function snackReducer(state, action) {
   if (!action) return {
-    success: "Closed",
-    show: false
+    show: false,
+    severity: state.severity
   };
   const severity = Object.keys(action)[0];
   const message = Object.values(action)[0];
@@ -34,7 +34,9 @@ const snackReducer = function snackReducer(state, action) {
 };
 
 function useSnack() {
-  const [snack, showMessage] = (0, _react.useReducer)(snackReducer, snackReducer(null));
+  const [snack, showMessage] = (0, _react.useReducer)(snackReducer, {
+    show: false
+  });
   return {
     snackBar: /*#__PURE__*/_react.default.createElement(_Snackbar.default, {
       open: snack.show,
